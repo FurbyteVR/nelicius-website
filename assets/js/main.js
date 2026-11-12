@@ -1,4 +1,4 @@
-/* Nelicius Security — sitebrede scripts (geen externe libraries) */
+/* Nelicius — sitebrede scripts (geen externe libraries) */
 (function () {
   "use strict";
   var CFG = window.NELICIUS_CONFIG || { business: {}, forms: {}, analytics: {} };
