@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Nelicius Security — stylesheet
+   Nelicius — stylesheet
    Lettertypen worden lokaal gehost (geen Google Fonts → geen doorgifte van
    IP-adressen aan derden). Beide fonts vallen onder de SIL Open Font License.
    ========================================================================== */
@@ -227,3 +227,71 @@ section { padding: clamp(3.5rem, 7vw, 5.5rem) 0; }
 
 .not-found { text-align: center; padding: 6rem 0; }
 .not-found .code { font: 700 clamp(5rem, 14vw, 9rem) var(--font-head); color: var(--green-700); line-height: 1; }
+
+/* ==========================================================================
+   Nelicius Service – aanvullingen
+   ========================================================================== */
+.hero-phone { justify-self: center; width: min(100%, 340px); }
+.flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; counter-reset: flow; }
+@media (max-width: 860px) { .flow { grid-template-columns: 1fr; } }
+.flow .card { position: relative; }
+.flow .card::before { counter-increment: flow; content: counter(flow); position: absolute; top: 1.2rem; right: 1.4rem; font: 700 2.4rem var(--font-head); color: var(--mint-100); }
+.faq details { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: .8rem; }
+.faq summary { font-weight: 700; cursor: pointer; list-style-position: outside; }
+.faq details[open] summary { margin-bottom: .6rem; color: var(--green-700); }
+.status-pill { display: inline-flex; align-items: center; gap: .5rem; background: rgba(127,224,176,.15); color: var(--mint-300); border: 1px solid rgba(127,224,176,.35); padding: .35rem .8rem; border-radius: 99px; font-size: .88rem; font-weight: 600; margin-bottom: 1.2rem; }
+
+/* ---------- Demo / scanscherm ---------- */
+.demo-body { background: var(--bg-soft); }
+.demo-top { background: var(--green-900); color: #fff; }
+.demo-top .container { display: flex; align-items: center; justify-content: space-between; min-height: 60px; gap: 1rem; max-width: 640px; }
+.demo-top .brand { color: #fff; }
+.demo-top .brand .brand-text small { color: var(--mint-300); }
+.demo-top a.back { color: #fff; font-size: .92rem; }
+.demo-banner { background: #fff4dc; color: #4a3300; font-size: .9rem; text-align: center; padding: .55rem 1rem; border-bottom: 1px solid #ecd9a6; }
+.demo-wrap { max-width: 640px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
+.asset-card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 1.4rem; margin-bottom: 1rem; }
+.asset-head { display: flex; gap: 1rem; align-items: flex-start; }
+.asset-icon { width: 56px; height: 56px; flex-shrink: 0; border-radius: 12px; background: var(--mint-100); color: var(--green-700); display: grid; place-items: center; }
+.asset-icon svg { width: 32px; height: 32px; }
+.asset-id { font: 700 .85rem var(--font-head); letter-spacing: .12em; color: var(--muted); }
+.asset-card h1 { font-size: 1.5rem; margin: .15rem 0 .2rem; }
+.asset-sub { color: var(--muted); margin: 0; }
+.chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+.chip { font-size: .85rem; font-weight: 600; padding: .3rem .7rem; border-radius: 99px; background: var(--bg-soft); border: 1px solid var(--line); }
+.chip.ok { background: var(--mint-100); border-color: #b5e3cb; color: var(--green-900); }
+.chip.warn { background: #fff4dc; border-color: #ecd9a6; color: #5a3d00; }
+.role-switch { display: flex; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 4px; margin-bottom: 1rem; }
+.role-switch button { flex: 1; border: 0; background: none; padding: .65rem; border-radius: 7px; font: 600 .95rem var(--font-body); color: var(--muted); cursor: pointer; }
+.role-switch button[aria-pressed="true"] { background: var(--green-700); color: #fff; }
+.tabs { display: flex; gap: .25rem; overflow-x: auto; border-bottom: 2px solid var(--line); margin-bottom: 1rem; }
+.tabs [role="tab"] { border: 0; background: none; padding: .75rem 1rem; font: 600 .95rem var(--font-body); color: var(--muted); cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; white-space: nowrap; }
+.tabs [role="tab"][aria-selected="true"] { color: var(--green-700); border-bottom-color: var(--green-700); }
+.panel { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 1.3rem; }
+.spec { display: grid; grid-template-columns: 1fr 1.4fr; gap: .1rem 1rem; margin: 0; }
+.spec dt { color: var(--muted); padding: .55rem 0; border-bottom: 1px solid var(--bg-soft); }
+.spec dd { margin: 0; padding: .55rem 0; border-bottom: 1px solid var(--bg-soft); font-weight: 600; }
+.timeline { list-style: none; margin: 0; padding: 0; }
+.timeline > li { position: relative; padding: 0 0 1.4rem 1.6rem; border-left: 2px solid var(--line); margin-left: .4rem; }
+.timeline > li:last-child { border-left-color: transparent; padding-bottom: 0; }
+.timeline > li::before { content: ""; position: absolute; left: -7px; top: .3rem; width: 12px; height: 12px; border-radius: 50%; background: var(--green-700); }
+.timeline > li.storing::before { background: var(--alert); }
+.timeline > li.nieuw { animation: flash 1.6s ease-out; }
+@keyframes flash { from { background: var(--mint-100); } to { background: transparent; } }
+.timeline time { font-size: .88rem; color: var(--muted); }
+.timeline h3 { font-size: 1.05rem; margin: .15rem 0 .3rem; font-family: var(--font-body); }
+.timeline ul li { border: 0; padding: 0; margin: 0 0 .2rem; }
+.timeline ul { margin: .3rem 0 0; padding-left: 1.1rem; color: var(--ink); }
+.timeline .by { font-size: .85rem; color: var(--muted); margin-top: .35rem; }
+.type { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: .15rem .45rem; border-radius: 4px; background: var(--mint-100); color: var(--green-900); margin-left: .4rem; vertical-align: middle; }
+.type.storing { background: #fde8e6; color: #7a1a14; }
+.doc-list { list-style: none; margin: 0; padding: 0; }
+.doc-list li { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .8rem 0; border-bottom: 1px solid var(--bg-soft); }
+.doc-list button { font-size: .9rem; }
+.btn-sm { padding: .5rem .9rem; font-size: .9rem; }
+.add-work { margin-top: 1rem; }
+.add-form { border-top: 1px solid var(--line); margin-top: 1rem; padding-top: 1rem; }
+.monteur-only[hidden], .klant-only[hidden] { display: none !important; }
+.demo-note { font-size: .9rem; color: var(--muted); margin-top: .8rem; }
+
+@media (max-width: 480px) { .tabs [role="tab"] { padding: .7rem .65rem; font-size: .9rem; } }

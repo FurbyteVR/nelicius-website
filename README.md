@@ -1,6 +1,6 @@
-# Nelicius Security – website
+# Nelicius Service – website
 
-Statische website (HTML/CSS/JS, geen build-stap nodig) voor Nelicius Security, klaar voor **GitHub Pages**.
+Statische website (HTML/CSS/JS, geen build-stap nodig) voor Nelicius Service, klaar voor **GitHub Pages**.
 
 ## Online zetten via GitHub Pages
 
@@ -43,8 +43,7 @@ GitHub Pages heeft geen server. Zonder instelling openen formulieren het e-mailp
 | Bestand | Inhoud |
 |---|---|
 | `index.html` | Homepage |
-| `diensten.html` | Diensten + prijstransparantie |
-| `incident.html` | Directe hulp bij incidenten |
+| `demo.html` | Interactieve demo van het scanscherm |
 | `over-ons.html` | Over ons + bedrijfsgegevens |
 | `contact.html` | Contactformulier |
 | `privacy.html` | Privacyverklaring (AVG) |

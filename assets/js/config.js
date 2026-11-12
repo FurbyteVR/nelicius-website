@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Nelicius Security — CENTRALE CONFIGURATIE
+   Nelicius — CENTRALE CONFIGURATIE
    --------------------------------------------------------------------------
    Pas hier je bedrijfsgegevens aan. Ze worden automatisch op alle pagina's
    ingevuld (footer, contactpagina, privacyverklaring, voorwaarden, enz.).
@@ -9,8 +9,8 @@
    ========================================================================== */
 window.NELICIUS_CONFIG = {
   business: {
-    name: "Nelicius Security",
-    legalName: "[Juridische naam, bv. Nelicius Security B.V.]",
+    name: "Nelicius",
+    legalName: "[Juridische naam, bv. Nelicius V.O.F.]",
     street: "[Straat + huisnummer]",
     postcode: "[Postcode]",
     city: "[Plaats]",
