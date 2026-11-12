@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /afmelden.html
+
+Sitemap: https://nelicius.callmebyte.com/sitemap.xml
