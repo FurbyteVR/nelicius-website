@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard-demo | Nelicius Service</title>
+<meta name="description" content="Bekijk het Nelicius Service-dashboard: installaties, onderhoud, storingen, documenten en gebruikers van een fictief installatiebedrijf.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://nelicius.callmebyte.com/dashboard.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dashboard-demo | Nelicius Service">
+<meta property="og:description" content="Bekijk het Nelicius Service-dashboard: installaties, onderhoud, storingen, documenten en gebruikers van een fictief installatiebedrijf.">
+<meta property="og:image" content="https://nelicius.callmebyte.com/assets/img/apple-touch-icon.png">
+<meta property="og:locale" content="nl_NL">
+<meta name="theme-color" content="#062b1d">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/dashboard.js" defer></script>
+</head>
+<body class="demo-body">
+<a class="skip-link" href="#main">Direct naar inhoud</a>
+<header class="demo-top on-dark">
+  <div class="container" style="max-width:none">
+    <a class="brand on-dark" href="index.html" aria-label="Nelicius Service – naar de homepage">
+      <img class="mark" src="assets/img/logo-mark-white.png" alt="" width="42" height="39">
+      <span class="brand-text" aria-hidden="true">NELICIUS<small>SERVICE</small></span>
+    </a>
+    <span style="display:flex;gap:1.2rem;flex-wrap:wrap"><a class="back" href="demo.html">Scanscherm-demo</a><a class="back" href="index.html">← Website</a></span>
+  </div>
+</header>
+<div class="demo-banner" role="note"><strong>Demo</strong> · Fictief installatiebedrijf met verzonnen gegevens. Zo ziet het kantoor zijn installaties.</div>
+<div class="dash">
+  <nav class="dash-side on-dark" aria-label="Dashboardmenu"><ul><li><button type="button" data-view="dashboard" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Dashboard</button></li><li><button type="button" data-view="installaties"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="12" r="3.5"/><path d="M9 8.5v7M5.5 12h7M15.5 9h3M15.5 12h3M15.5 15h3"/></svg>Installaties</button></li><li><button type="button" data-view="onderhoud"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 21h4"/></svg>Onderhoud</button></li><li><button type="button" data-view="documenten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M8.5 13h7M8.5 17h5"/></svg>Documenten</button></li><li><button type="button" data-view="gebruikers"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.2a5 5 0 0 1 5.5 4.8"/></svg>Gebruikers</button></li></ul></nav>
+  <main id="main" tabindex="-1" class="dash-main">
+    <section class="dview" id="view-dashboard" aria-labelledby="greet">
+      <h1 id="greet">Goedendag, Demo Installatietechniek</h1>
+      <div class="kpis">
+        <div class="kpi"><div class="num">127</div><div class="lbl">Installaties</div></div>
+        <div class="kpi warn"><div class="num">8</div><div class="lbl">Onderhoud binnen 30 dagen</div></div>
+        <div class="kpi alert"><div class="num">2</div><div class="lbl">Open storingen</div></div>
+        <div class="kpi warn"><div class="num">4</div><div class="lbl">Garanties lopen af</div></div>
+      </div>
+      <div class="dash-grid">
+        <div class="box"><h2>Recente activiteit</h2><ul class="feed" id="feed"></ul></div>
+        <div class="box"><h2>Snel naar</h2>
+          <div class="btn-row" style="flex-direction:column;align-items:stretch">
+            <button type="button" class="btn btn-primary" data-goto="onderhoud">Onderhoud &amp; storingen bekijken</button>
+            <button type="button" class="btn btn-outline" data-goto="installaties">Alle installaties</button>
+            <a class="btn btn-outline" href="demo.html">Open scanscherm WP-10482</a>
+          </div>
+          <p class="demo-note">Tip: zoek bij Installaties op een plaats, klant of type.</p>
+        </div>
+      </div>
+    </section>
+    <section class="dview" id="view-installaties" hidden aria-labelledby="h-inst">
+      <h1 id="h-inst">Installaties</h1>
+      <div class="toolbar"><div class="field"><label for="asset-search">Zoeken</label><input id="asset-search" type="search" placeholder="Bijv. Rhenen, airco of WP-10482" autocomplete="off"></div></div>
+      <p class="meta" id="asset-count" role="status" aria-live="polite"></p>
+      <div class="box"><div class="table-wrap"><table class="dtable"><thead><tr><th scope="col">ID</th><th scope="col">Type</th><th scope="col">Model</th><th scope="col">Klant</th><th scope="col">Plaats</th><th scope="col">Volgende beurt</th><th scope="col">Status</th></tr></thead><tbody id="asset-rows"></tbody></table></div></div>
+      <p class="demo-note">In de demo kun je alleen WP-10482 openen.</p>
+    </section>
+    <section class="dview" id="view-onderhoud" hidden aria-labelledby="h-ond">
+      <h1 id="h-ond">Onderhoud &amp; aandachtspunten</h1>
+      <div class="box"><div class="table-wrap"><table class="dtable"><thead><tr><th scope="col">ID</th><th scope="col">Type</th><th scope="col">Klant</th><th scope="col">Volgende beurt</th><th scope="col">Status</th></tr></thead><tbody id="maint-rows"></tbody></table></div></div>
+    </section>
+    <section class="dview" id="view-documenten" hidden aria-labelledby="h-doc">
+      <h1 id="h-doc">Documenten</h1>
+      <div class="box"><div class="table-wrap"><table class="dtable"><thead><tr><th scope="col">Naam</th><th scope="col">Soort</th><th scope="col">Gekoppeld aan</th></tr></thead><tbody id="doc-rows"></tbody></table></div></div>
+    </section>
+    <section class="dview" id="view-gebruikers" hidden aria-labelledby="h-usr">
+      <h1 id="h-usr">Gebruikers</h1>
+      <div class="box"><div class="table-wrap"><table class="dtable"><thead><tr><th scope="col">Naam</th><th scope="col">Rol</th><th scope="col">Rechten</th></tr></thead><tbody id="user-rows"></tbody></table></div>
+        <p style="margin-top:1rem"><button type="button" class="btn btn-primary btn-sm" id="user-add">+ Monteur uitnodigen</button></p>
+        <p class="demo-note" id="user-add-note" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+</div>
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-modal="false" aria-labelledby="cookie-title" aria-describedby="cookie-desc" hidden>
+  <h2 id="cookie-title" tabindex="-1">Jouw privacykeuze</h2>
+  <p id="cookie-desc">Deze website plaatst standaard <strong>geen</strong> tracking- of advertentiecookies. We onthouden alleen je keuze in je browser. Analytische cookies gebruiken we uitsluitend als jij daar toestemming voor geeft. Meer info in ons <a href="cookiebeleid.html">cookiebeleid</a>.</p>
+  <div class="btn-row">
+    <button type="button" class="btn btn-primary" data-consent="reject">Alleen noodzakelijk</button>
+    <button type="button" class="btn btn-primary" data-consent="accept">Alles accepteren</button>
+  </div>
+  <p style="margin:.8rem 0 0"><button type="button" class="linklike" style="color:var(--green-700)" data-consent="customize" aria-expanded="false" aria-controls="cookie-prefs">Zelf instellen</button></p>
+  <div id="cookie-prefs" class="cookie-prefs" hidden>
+    <fieldset>
+      <legend class="visually-hidden">Cookiecategorieën</legend>
+      <div class="check"><input type="checkbox" id="consent-necessary" checked disabled><label for="consent-necessary"><strong>Noodzakelijk</strong> – onthoudt je cookiekeuze. Altijd actief.</label></div>
+      <div class="check"><input type="checkbox" id="consent-analytics"><label for="consent-analytics"><strong>Analytisch</strong> – anonieme bezoekstatistieken om de site te verbeteren.</label></div>
+    </fieldset>
+    <button type="button" class="btn btn-primary" data-consent="save">Keuze opslaan</button>
+  </div>
+</div>
+</body>
+</html>
