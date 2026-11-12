@@ -30,10 +30,10 @@ window.NELICIUS_CONFIG = {
      Laat leeg ("") → formulieren openen dan het e-mailprogramma van de
      bezoeker (mailto) met het ingevulde bericht. */
   forms: {
-    contact: "",      // bv. "https://formspree.io/f/abcdwxyz"
-    newsletter: "",
-    unsubscribe: "",
-    dataRequest: ""
+    contact: "https://formspree.io/f/xqpqapqd",      // bv. "https://formspree.io/f/abcdwxyz"
+    newsletter: "https://formspree.io/f/xqpqapqd",
+    unsubscribe: "https://formspree.io/f/xqpqapqd",
+    dataRequest: "https://formspree.io/f/xqpqapqd"
   },
 
   /* Analytics (optioneel)
