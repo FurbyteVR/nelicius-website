@@ -17,8 +17,8 @@ window.NELICIUS_CONFIG = {
     country: "Nederland",
     kvk: "[KvK-nummer]",
     vat: "[Btw-identificatienummer]",
-    email: "info@nelicius.nl",           // algemeen e-mailadres
-    privacyEmail: "privacy@nelicius.nl", // voor AVG-verzoeken
+    email: "info@callmebyte.com",           // algemeen e-mailadres
+    privacyEmail: "privacy@callmebyte.com", // voor AVG-verzoeken
     phone: "[+31 ...]",                  // algemeen telefoonnummer
     emergencyPhone: "[+31 ... 24/7]",    // nummer voor incidenten
     hours: "Maandag t/m vrijdag 09:00–17:00"
